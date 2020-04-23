@@ -10,6 +10,9 @@ document.querySelector('.post-submit').addEventListener('click', submitPost);
 // Listen for delete
 document.querySelector('#posts').addEventListener('click', deletePost);
 
+// Listen for edit state
+document.querySelector('#posts').addEventListener('click', enableEdit);
+
 // Get posts
 function getPosts() {
     http.get('http://localhost:3000/posts')
