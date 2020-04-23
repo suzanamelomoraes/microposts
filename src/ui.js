@@ -71,7 +71,11 @@ class UI {
     }
 
     // Fill form to edit
-    fillForm(data){}
+    fillForm(data){
+        this.titleInput.value = data.title;
+        this.bodyInput.value = data.body;
+        this.idInput.value = data.id;
+    }
 
 }
 
