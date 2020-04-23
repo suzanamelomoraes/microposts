@@ -54,7 +54,11 @@ class UI {
     }
 
     clearAlert(){
-        
+        const currentAlert = document.querySelector('.alert');
+
+        if(currentAlert) {
+            currentAlert.remove();
+        }
     }
 
     clearFields() {
