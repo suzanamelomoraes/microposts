@@ -36,3 +36,22 @@ function submitPost() {
     })
     .catch(err => console.log(err));
 }
+
+// Delete post
+
+function deletePost(e) {
+   
+    if(e.target.parentElement.classList.contains('delete')){
+        const id = e.target.parentElement.dataset.id;
+        console.log(e.target.parentElement.dataset)
+        if(confirm('Please, confirm you want to delete this post')){
+            http.delete(`http://localhost:3000/posts/${id}`)
+            .then(data => {
+                ui.showAlert('Post Removed', 'alert alert-success');
+                getPosts();
+            })
+            .catch(err => console.log(err));
+        }
+    }
+    e.preventDefault();
+}
