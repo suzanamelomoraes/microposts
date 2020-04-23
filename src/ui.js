@@ -31,6 +31,31 @@ class UI {
         this.post.innerHTML = output;
     }
 
+    showAlert(message, className){
+        this.clearAlert();
+
+        // Create div
+        const div = document.createElement('div');
+        // Add classes
+        div.className = className;
+        // Add text
+        div.appendChild(document.createTextNode(message));
+        // Get parent
+        const container = document.querySelector('.postsContainer');
+        // Get posts
+        const posts = document.querySelector('#posts');
+        // Insert alert div
+        container.insertBefore(div, posts);
+
+        // Timeout
+        setTimeout(() => {
+            this.clearAlert();
+        }, 2000);
+    }
+
+    clearAlert(){
+        
+    }
 
     clearFields() {
         this.titleInput.value = '';
