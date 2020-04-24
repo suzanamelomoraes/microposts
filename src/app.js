@@ -88,3 +88,13 @@ function enableEdit(e){
 
     e.preventDefault();
 }
+
+// Cancel edit state
+
+function cancelEdit(e){
+    if(e.target.classList.contains('post-cancel')){
+        ui.changeFormState('add');
+    }
+
+    e.preventDefault();
+}
