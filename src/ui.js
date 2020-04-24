@@ -50,7 +50,7 @@ class UI {
         container.insertBefore(div, posts);
 
         // Timeout
-        setTimeout(() => {primary
+        setTimeout(() => {this.clearAlert();
         }, 2000);
     }
 
@@ -78,6 +78,7 @@ class UI {
         this.changeFormState('edit');
     }
 
+    // Clear the Id input value
     clearIdInput(){
         this.idInput.value = '';
     }
